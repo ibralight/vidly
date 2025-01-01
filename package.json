@@ -1,6 +1,9 @@
 {
   "name": "vidly",
   "version": "1.0.0",
+   "engines": {
+    "node": "8.17.0"
+   },
   "description": "",
   "main": "index.js",
   "scripts": {
