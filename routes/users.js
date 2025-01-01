@@ -25,7 +25,9 @@ router.post("/", async (req, res) => {
   const token = user.generateAuthToken();
   res
     .header("x-auth-token", token)
+    .header("access-control-expose-headers", "x-auth-token")
     .send(_.pick(user, ["_id", "name", "email"]));
+  //access constrol expose header is used to allow the user to access some header form http protocol
 });
 
 module.exports = router;
